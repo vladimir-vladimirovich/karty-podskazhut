@@ -170,6 +170,10 @@ button:focus-visible {
   line-height: 200%;
 }
 
+.content__list-container {
+  padding: 0;
+}
+
 .content__list {
   padding-inline-start: 40px;
   list-style: none;

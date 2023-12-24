@@ -69,25 +69,26 @@
       <figure class="content__figure">
         <picture>
           <source
-            src="./images/cards-1x.png, ./images/cards-2x.png"
+            srcset="./images/cards-1x.png 1x, ./images/cards-2x.png 2x"
             type="image/png"
           />
           <source
-            src="./images/cards-1x.avif, ./images/cards-2x.avif"
+            srcset="./images/cards-1x.avif 1x, ./images/cards-2x.avif 2x"
             type="image/avif"
           />
           <source
-            src="./images/cards-1x.webp, ./images/cards-2x.webp"
+            srcset="./images/cards-1x.webp 1x, ./images/cards-2x.webp 2x"
             type="image/webp"
           />
           <img
+            src="/images/cards-1x.png"
             srcset="
-              ./images/cards-1x.png,
-              ./images/cards-2x.png,
-              ./images/cards-1x.avif,
-              ./images/cards-2x.avif,
-              ./images/cards-1x.webp,
-              ./images/cards-2x.webp
+              ./images/cards-1x.png  1x,
+              ./images/cards-2x.png  2x,
+              ./images/cards-1x.avif 1x,
+              ./images/cards-2x.avif 2x,
+              ./images/cards-1x.webp 1x,
+              ./images/cards-2x.webp 2x
             "
             alt="изображение деревянной поверхности с красиво выложенными на ней вещами"
             class="content__picture"
@@ -157,14 +158,16 @@
       </article>
       <h2 class="heading content__title">Кто пользовался Oblique Strategies</h2>
       <div class="content__text-block">
-        <li class="content__list">
-          Дэвид Боуи во время записи Берлинской трилогии;
-        </li>
-        <li class="content__list">
-          Talking Heads и Дэвид Бирн в сольной карьере;
-        </li>
-        <li class="content__list">Coldplay;</li>
-        <li class="content__list">MGMT.</li>
+        <ul class="content__list-container">
+          <li class="content__list">
+            Дэвид Боуи во время записи Берлинской трилогии;
+          </li>
+          <li class="content__list">
+            Talking Heads и Дэвид Бирн в сольной карьере;
+          </li>
+          <li class="content__list">Coldplay;</li>
+          <li class="content__list">MGMT.</li>
+        </ul>
       </div>
     </main>
     <footer class="footer">
