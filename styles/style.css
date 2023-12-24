@@ -4,8 +4,11 @@
   --accent-color: #ffab6b;
   --main-font: Raleway, sans-serif;
   --accent-font: "STIX Two Text", serif;
-  --content-section-side-padding: 5vw;
-  --content-vertical-margin: 7vw;
+  --content-section-side-padding: 5vi;
+  --content-vertical-margin: 7vi;
+
+  --font-size-medium: 18px;
+  --font-size-large: 30px;
 }
 
 .theme_dark {
@@ -46,7 +49,7 @@ button:focus-visible {
 }
 
 .header {
-  padding-top: 10vw;
+  padding-top: 10vi;
 }
 
 .heading {
@@ -87,9 +90,9 @@ button:focus-visible {
   font-family: inherit;
   color: currentColor;
   cursor: pointer;
-  font-size: 18px;
+  font-size: var(--font-size-medium);
   position: relative;
-  /* line-height: 104%; */
+  line-height: 104%;
 }
 
 .header__theme-button:hover {
@@ -131,13 +134,13 @@ button:focus-visible {
 }
 
 .content__title {
-  font-size: 30px;
+  font-size: var(--font-size-large);
   margin-top: var(--content-vertical-margin);
-  margin-bottom: 2.5vw;
+  margin-bottom: 2.5vi;
 }
 
 .content__text-block {
-  font-size: 18px;
+  font-size: var(--font-size-medium);
   font-weight: 400;
   font-style: normal;
   line-height: normal;
@@ -179,13 +182,11 @@ button:focus-visible {
   display: inline-block;
   width: 15px;
   height: 15px;
-  left: 20px;
+  left: 15px;
   top: 50%;
   transform: translateY(-50%);
   background-image: url("../images/marker-light.svg");
 }
-/* background: center / contain no-repeat url("../images/marker-light.svg"); */
-/* margin-right: 10px; */
 
 .theme_dark .content__list::before {
   background: center / contain no-repeat url("../images/marker-dark.svg");
@@ -197,14 +198,12 @@ button:focus-visible {
 
 .content__text-block_type_first-lettered
   .content__paragraph:first-child::first-letter {
-  font-size: 30px;
+  font-size: var(--font-size-large);
   font-weight: 700;
   background-color: var(--accent-color);
   padding: 0 4px;
   margin-right: 1px;
   display: inline-block;
-  /* letter-spacing: 9px; */
-  /* margin-right: 0.2em; */
 }
 
 .theme_dark
@@ -224,6 +223,7 @@ button:focus-visible {
   padding: 20px 0;
   text-align: center;
   border-bottom: 1px solid currentColor;
+  font-size: var(--font-size-medium);
 }
 
 .content__picture {
@@ -247,7 +247,7 @@ button:focus-visible {
 
 .content__card-subtitle {
   font-family: var(--main-font);
-  font-size: 18px;
+  font-size: var(--font-size-medium);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -276,14 +276,14 @@ button:focus-visible {
 }
 
 .footer {
-  margin-top: 10vw;
+  margin-top: 10vi;
   padding: 2.5%;
   border-top: 1px solid currentColor;
 }
 
 .footer__copyright {
   text-align: center;
-  font-size: 18px;
+  font-size: var(--font-size-medium);
   color: currentColor;
   font-weight: 400;
 }
