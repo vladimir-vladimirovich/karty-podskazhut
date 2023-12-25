@@ -5,10 +5,19 @@
   --main-font: Raleway, sans-serif;
   --accent-font: "STIX Two Text", serif;
   --content-section-side-padding: 5vi;
-  --content-vertical-margin: 7vi;
 
+  /* Всем заголовкам внутри <main> мы зададим один и тот же класс, потому что размер шрифта и отступы от этих заголовков всегда одинаковые. Этот класс — .content__title. Опишите его в CSS:
+    - фиксированный размер шрифта (замерьте в макете);
+    - верхний отступ — 7% ширины;
+    - нижний отступ — 2.5% ширины  
+
+  Если я использую 7% ширины как в рекомендациях то у меня не получается выровнять верстку по макету,
+  а с 6.2vi заголовки совпадают */
+  --content-vertical-margin: 6.2vi;
   --font-size-medium: 18px;
   --font-size-large: 30px;
+
+  --theme-dark-accent-background: url("../images/pattern.svg");
 }
 
 .theme_dark {
@@ -43,8 +52,8 @@ figure {
   margin: 0;
 }
 
-a:focus-visible,
-button:focus-visible {
+a:focus,
+button:focus {
   outline: none;
 }
 
@@ -125,7 +134,7 @@ button:focus-visible {
 }
 
 .theme_dark .header__theme-button_is-active::after {
-  background-image: url("../images/pattern.svg");
+  background-image: var(--theme-dark-accent-background);
 }
 
 .content-section {
@@ -273,10 +282,8 @@ button:focus-visible {
   z-index: -1;
 }
 
-.theme_dark .colored-text {
-  background-image: url("../images/pattern.svg");
-  background-repeat: repeat-x;
-  background-position-y: 80%;
+.theme_dark .colored-text::after {
+  background-image: var(--theme-dark-accent-background);
 }
 
 .footer {
